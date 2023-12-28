@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Averia Gruesa Libre', sans-serif;
+}
+body{
+    background-color: rgb(241, 249, 239);
+}
+.cards{
+    display: grid;
+    /* minmax() function specifies that each column should have a
+     minimum width of 300px, but it can also grow to take up the remaining
+     space in the grid if needed. The 1fr part of the function
+     means that the remaining space will be distributed evenly among the columns. */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    max-width: 1250px;
+    margin: 150px auto;
+    padding: 20px;
+    gap: 20px;
+}
+.cards .card-items{
+    background: #fff;
+    padding: 26px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+    list-style: none;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: border 0.5s ease;
+}
+.cards .card-items:hover{
+    border: 2px solid #77c577b1;
+}
+.cards .card-items img{
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.card-items span{
+    display: inline-block;
+    background-color: #8eed8c77;
+    margin-top: 30px;
+    padding: 8px 15px;
+    font-size: 0.75rem;
+    border-radius: 50px;
+}
+.card-items .soccer{
+    background-color: #53d753ba;
+    color: #042804b1;
+}
+.card-items .formula-one{
+    background-color: #ff2f01;
+    color: #190101b1;
+}
+.card-items .basketball{
+    background-color: #ce4709d3;
+    color: #331703b1;
+}
+.card-items .tennis{
+    background-color: #b0e743d3;
+    color: #222b03b1;
+}
+.card-items h4{
+    color: #000;
+    margin-top: 28px;
+}
+.card-items .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-35deg);
+    height: 40px;
+    width: 40px;
+    color: #000;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-top: 40px;
+    transition: 0.2s ease;
+}
+.cards .card-items:hover .arrow  {
+    background: #000;
+    color: #fff;
+}
+
+
